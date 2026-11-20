@@ -1,5 +1,5 @@
-#ifndef SANDGL_RENDERER_H
-#define SANDGL_RENDERER_H
+#ifndef OPENGLRAYTRACER_RENDERER_H
+#define OPENGLRAYTRACER_RENDERER_H
 
 #include "VAO/VAO.h"
 #include "VBO/VBO.h"
@@ -51,4 +51,4 @@ private:
 };
 
 
-#endif //SANDGL_RENDERER_H
+#endif //OPENGLRAYTRACER_RENDERER_H

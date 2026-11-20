@@ -1,5 +1,5 @@
-#ifndef SANDGL_SHADER_H
-#define SANDGL_SHADER_H
+#ifndef OPENGLRAYTRACER_SHADER_H
+#define OPENGLRAYTRACER_SHADER_H
 
 #include <string>
 #include <glad/glad.h>
@@ -31,4 +31,4 @@ private:
 
 
 
-#endif //SANDGL_SHADER_H
+#endif //OPENGLRAYTRACER_SHADER_H

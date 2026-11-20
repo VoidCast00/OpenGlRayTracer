@@ -30,7 +30,7 @@ void Window::init()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // create a window pointer
-    window = glfwCreateWindow(WIDTH, HEIGHT, "SandGL", nullptr, nullptr);
+    window = glfwCreateWindow(WIDTH, HEIGHT, "OpenGlRayTracer", nullptr, nullptr);
     if (window == nullptr) // chek for correct window creation
     {
         throw std::runtime_error("failed to init glfw");

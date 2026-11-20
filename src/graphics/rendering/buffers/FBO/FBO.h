@@ -1,5 +1,5 @@
-#ifndef SANDGL_FBO_H
-#define SANDGL_FBO_H
+#ifndef OPENGLRAYTRACER_FBO_H
+#define OPENGLRAYTRACER_FBO_H
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -22,4 +22,4 @@ public:
 };
 
 
-#endif //SANDGL_FBO_H
+#endif //OPENGLRAYTRACER_FBO_H

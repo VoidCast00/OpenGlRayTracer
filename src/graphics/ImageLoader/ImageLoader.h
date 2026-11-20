@@ -1,5 +1,5 @@
-#ifndef SANDGL_IMAGELOADER_H
-#define SANDGL_IMAGELOADER_H
+#ifndef OPENGLRAYTRACER_IMAGELOADER_H
+#define OPENGLRAYTRACER_IMAGELOADER_H
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -19,4 +19,4 @@ public:
 };
 
 
-#endif //SANDGL_IMAGELOADER_H
+#endif //OPENGLRAYTRACER_IMAGELOADER_H

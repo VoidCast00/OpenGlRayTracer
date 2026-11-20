@@ -1,5 +1,5 @@
-#ifndef SANDGL_WINDOW_H
-#define SANDGL_WINDOW_H
+#ifndef OPENGLRAYTRACER_WINDOW_H
+#define OPENGLRAYTRACER_WINDOW_H
 
 #include  "shader.h"
 #include "glad/glad.h"
