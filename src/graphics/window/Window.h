@@ -18,11 +18,10 @@ public:
      double cameraPosX = 0;
      double cameraPosY = 0;
      GLFWwindow* window{};
-     const Shader* shader;
-     Window(int h, int w, const Shader* shader);
+     Window(int h, int w);
      ~Window();
      void init();
-     void processInput();
+     void processInput(const Shader* shader);
 
      
 private:

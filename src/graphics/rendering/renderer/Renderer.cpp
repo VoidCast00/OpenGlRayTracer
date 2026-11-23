@@ -56,6 +56,8 @@ void Renderer::init()
     ebo.setBufferData(std::as_bytes(std::span(indices)));
 
 
+    vao.attachVertexBuffer(0, vbo, sizeof(Vertex));
+    vao.attachElementBuffer(ebo);
     vao.addAttrib(0, 0, 3, GL_FLOAT, offsetof(Vertex, x));
     vao.addAttrib(1,0,3, GL_FLOAT, offsetof(Vertex, r));
     vao.addAttrib(2,0,2, GL_FLOAT, offsetof(Vertex, u));

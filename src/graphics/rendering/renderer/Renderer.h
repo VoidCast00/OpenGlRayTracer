@@ -22,14 +22,14 @@ public:
     void DrawElements() const;
     std::vector<Vertex> vertices{};
     std::vector<GLuint> indices{};
-    ScreenVertex screenVertices[24] = {
-        -1.0f,  1.0f,  0.0f, 1.0f,
-        -1.0f, -1.0f,  0.0f, 0.0f,
-         1.0f, -1.0f,  1.0f, 0.0f,
+    ScreenVertex screenVertices[6] = {
+    {-1.0f,  1.0f,  0.0f, 1.0f},
+    {-1.0f, -1.0f,  0.0f, 0.0f},
+    {1.0f, -1.0f,  1.0f, 0.0f},
 
-        -1.0f,  1.0f,  0.0f, 1.0f,
-         1.0f, -1.0f,  1.0f, 0.0f,
-         1.0f,  1.0f,  1.0f, 1.0f
+    {-1.0f,  1.0f,  0.0f, 1.0f},
+    {1.0f, -1.0f,  1.0f, 0.0f},
+    {1.0f,  1.0f,  1.0f, 1.0f}
     };
 
 

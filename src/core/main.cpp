@@ -11,14 +11,15 @@
 
 void GLAPIENTRY debugCallback(GLenum source, GLenum type, GLuint id, GLenum severity,
                              GLsizei length, const GLchar* message, const void* userParam);
-Shader shader(generated_shaders::default_vert, generated_shaders::default_frag);
-Shader screenShader(generated_shaders::screen_vert, generated_shaders::screen_frag);
-Renderer renderer;
-Window window(800, 600, &shader);
-ImageTexture imageTexture;
+
 float deltaTime = 0;
 float lastTime = 0;
 int main(){
+    Window window(800, 600);
+    Shader shader(generated_shaders::default_vert, generated_shaders::default_frag);
+    Shader screenShader(generated_shaders::screen_vert, generated_shaders::screen_frag);
+    Renderer renderer;
+    ImageTexture imageTexture;
     try{
         window.init();
         shader.init();
@@ -58,7 +59,7 @@ int main(){
         lastTime = currentFrame;
         //proces input
         //============//
-        window.processInput();
+        window.processInput(&shader);
 
 
 

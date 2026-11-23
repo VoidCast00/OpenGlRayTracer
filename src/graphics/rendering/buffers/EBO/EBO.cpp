@@ -7,7 +7,7 @@ EBO::EBO()= default;
 
 void EBO::setBufferData(std::span<const std::byte> data) const
 {
-	glNamedBufferData(GL_ELEMENT_ARRAY_BUFFER, data.size_bytes(), data.data(), GL_STATIC_DRAW);
+	glNamedBufferData(ID, data.size_bytes(), data.data(), GL_STATIC_DRAW);
 }
 void EBO::init(){
 	glCreateBuffers(1, &ID);

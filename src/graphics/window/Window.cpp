@@ -1,7 +1,7 @@
 #include "Window.h"
 #include <iostream>
 
-Window::Window(const int h, const int w, const Shader* shader) : HEIGHT(h), WIDTH(w), shader(shader)  //constructors
+Window::Window(const int h, const int w) : HEIGHT(h), WIDTH(w)  //constructors
 {
 
     //empty :>
@@ -46,7 +46,7 @@ void Window::init()
 }
 
 void Window::glfwErrorCallback(const int error, const char* description) {
-    throw std::runtime_error("GLFW err " + std::to_string(error) + ": " + description);
+    std::printf("Error %d: %s\n", error, description);
 }
 
 void Window::framebuffer_size_callback(GLFWwindow* window, const int width, const int height)
@@ -55,7 +55,7 @@ void Window::framebuffer_size_callback(GLFWwindow* window, const int width, cons
 
 }
 
-void Window::processInput()
+void Window::processInput(const Shader* shader)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
     {

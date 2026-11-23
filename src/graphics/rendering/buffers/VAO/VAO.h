@@ -7,7 +7,7 @@
 
 
 #include "VBO/VBO.h"
-
+#include "EBO/EBO.h"
 
 class VAO
 {
@@ -18,6 +18,7 @@ public:
 	void init();
 
 	void attachVertexBuffer(GLuint slot, const VBO& vbo, GLsizei stride) const;
+	void attachElementBuffer(const EBO& ebo) const;
 	void addAttrib(GLuint location, GLuint slot, GLint count, GLenum type, GLuint offset) const;
 	void Bind() const;
 	void Unbind() const;

@@ -15,8 +15,7 @@ public:
 
 	void init();
 	void setBufferData(std::span<const std::byte> data) const;
-	void Bind() const;
-	void Unbind() const;
+
 	void Delete() const;
 };
 

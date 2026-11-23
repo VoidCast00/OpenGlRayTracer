@@ -5,10 +5,15 @@
 VAO::VAO()=default;
 
 void VAO::init(){
-	glGenVertexArrays(1, &ID);}
+	 glCreateVertexArrays(1, &ID);
+}
 
 void VAO::attachVertexBuffer(GLuint slot, const VBO& vbo, GLsizei stride) const {
 	glVertexArrayVertexBuffer(ID, slot, vbo.ID, 0, stride);
+}
+
+void VAO::attachElementBuffer(const EBO& ebo) const {
+	glVertexArrayElementBuffer(ID, ebo.ID);
 }
 
 
