@@ -27,10 +27,7 @@ void VAO::Bind() const
 	glBindVertexArray(ID);
 }
 
-void VAO::Unbind() const
-{
-	glBindVertexArray(0);
-}
+
 
 void VAO::Delete() const
 {
