@@ -17,7 +17,8 @@ public:
 	VAO();
 	void init();
 
-	void LinkAttrib(VBO& VBO, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, const void* offset);
+	void attachVertexBuffer(GLuint slot, const VBO& vbo, GLsizei stride) const;
+	void addAttrib(GLuint location, GLuint slot, GLint count, GLenum type, GLuint offset) const;
 	void Bind() const;
 	void Unbind() const;
 	void Delete() const;

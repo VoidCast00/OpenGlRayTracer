@@ -1,5 +1,7 @@
 #ifndef VBO_CLASS_H
 #define VBO_CLASS_H
+#include <span>
+#include <cstddef>
 #include<glad/glad.h>
 
 #include "vertex.h"
@@ -12,8 +14,7 @@ public:
 	VBO();
 
 	void init();
-	void setBufferData(const Vertex* vertices, GLsizeiptr size);
-	void setBufferData(const float* vertices, GLsizeiptr size);
+	void setBufferData(std::span<const std::byte> data) const;
 	void Bind() const;
 	void Unbind() const;
 	void Delete() const;

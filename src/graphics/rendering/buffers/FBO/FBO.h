@@ -2,6 +2,7 @@
 #define OPENGLRAYTRACER_FBO_H
 #include<glad/glad.h>
 
+//@todo update to Direct State Access
 
 //Frame Buffer Object =============================
 

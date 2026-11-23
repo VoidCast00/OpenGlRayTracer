@@ -7,15 +7,16 @@ VAO::VAO()=default;
 void VAO::init(){
 	glGenVertexArrays(1, &ID);}
 
-void VAO::LinkAttrib(VBO& VBO, GLuint layout, GLuint numComponents, GLenum type,  GLsizeiptr stride, const void* offset)
-{
-	VBO.Bind();
-	glVertexAttribPointer(layout, numComponents, type, GL_FALSE, stride, offset);
-	glEnableVertexAttribArray(layout);
-
-
+void VAO::attachVertexBuffer(GLuint slot, const VBO& vbo, GLsizei stride) const {
+	glVertexArrayVertexBuffer(ID, slot, vbo.ID, 0, stride);
 }
 
+
+void VAO::addAttrib(GLuint location, GLuint slot, GLint count, GLenum type, GLuint offset) const {
+	glEnableVertexArrayAttrib(ID, location);
+	glVertexArrayAttribFormat(ID, location, count, type, GL_FALSE, offset);
+	glVertexArrayAttribBinding(ID, location, slot);
+}
 void VAO::Bind() const
 {
 	glBindVertexArray(ID);

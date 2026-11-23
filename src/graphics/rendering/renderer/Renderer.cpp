@@ -1,5 +1,5 @@
 #include "Renderer.h"
-
+#include <cstddef>
 
 
 Renderer::Renderer() = default;
@@ -44,28 +44,21 @@ void Renderer::init()
 
     allocateMem(100,200);
 
-    screenVAO.Bind();
-    screenVBO.Bind();
-    screenVBO.setBufferData(screenVertices , 24*sizeof(float));
-    screenVAO.LinkAttrib(screenVBO, 0, 2, GL_FLOAT, 4 * sizeof(float), nullptr);
-    screenVAO.LinkAttrib(screenVBO, 1, 2, GL_FLOAT, 4 * sizeof(float), reinterpret_cast<void*>(2 * sizeof(float)));
+
+    screenVBO.setBufferData(std::as_bytes(std::span(screenVertices)));
+    screenVAO.attachVertexBuffer(0, screenVBO, sizeof(ScreenVertex));
+    screenVAO.addAttrib(0, 0, 2, GL_FLOAT, offsetof(ScreenVertex, x));
+    screenVAO.addAttrib(1, 0, 2, GL_FLOAT, offsetof(ScreenVertex, u));
 
 
 
-
-    vao.Bind();
-
-    vbo.Bind();
-    vbo.setBufferData(vertices.data(), vertices.size() * sizeof(Vertex));
-
-    ebo.Bind();
-    ebo.setBufferData(indices.data(), indices.size() * sizeof(GLuint));
+    vbo.setBufferData(std::as_bytes(std::span(vertices)));
+    ebo.setBufferData(std::as_bytes(std::span(indices)));
 
 
-
-    vao.LinkAttrib(vbo, 0, 3, GL_FLOAT, sizeof(Vertex), nullptr);
-    vao.LinkAttrib(vbo, 1, 3, GL_FLOAT,  sizeof(Vertex), reinterpret_cast<void*>(3 * sizeof(float)));
-    vao.LinkAttrib(vbo, 2, 2, GL_FLOAT,  sizeof(Vertex), reinterpret_cast<void*>(6 * sizeof(float)));
+    vao.addAttrib(0, 0, 3, GL_FLOAT, offsetof(Vertex, x));
+    vao.addAttrib(1,0,3, GL_FLOAT, offsetof(Vertex, r));
+    vao.addAttrib(2,0,2, GL_FLOAT, offsetof(Vertex, u));
 
 
     fbo.Bind();

@@ -1,6 +1,8 @@
 #ifndef EBO_CLASS_H
 #define EBO_CLASS_H
 
+#include <cstddef>
+#include <span>
 #include<glad/glad.h>
 
 //Element Buffer Objects=====================
@@ -11,10 +13,8 @@ public:
 	GLuint ID{}; // automatically initialized to zero
 
 	EBO();
-	void setBufferData(const GLuint* indices, GLsizeiptr size);
+	void setBufferData(std::span<const std::byte> data) const;
 	void init();
-	void Bind() const;
-	void Unbind() const;
 	void Delete() const;
 };
 
