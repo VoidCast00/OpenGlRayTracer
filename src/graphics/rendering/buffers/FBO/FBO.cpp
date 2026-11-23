@@ -1,7 +1,6 @@
 #include "FBO.h"
 
-#include <functional>
-
+//Frame Buffer Object =============================
 
 FBO::FBO()=default;
 
@@ -22,7 +21,6 @@ void FBO::generateTexture(int width, int height){
     //@todo implement RBO for depth and stencil for 3D
     // remember those cant be sampled
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureColorBufferID, 0);
-    chekBufferForErr();
     Unbind();
 }
 
@@ -37,14 +35,6 @@ void FBO::Unbind() const
 }
 
 
-void FBO::chekBufferForErr() const
-{
-    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-    {
-        std::cerr << "FrameBuffer error (" << glCheckFramebufferStatus(GL_FRAMEBUFFER) << "):\n";
-        throw std::runtime_error("Frame Buffer failed to complete ");
-    }
-}
 
 
 void FBO::Delete() const

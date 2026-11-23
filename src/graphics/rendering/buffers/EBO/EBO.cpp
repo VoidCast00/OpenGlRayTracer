@@ -1,6 +1,8 @@
 
 #include "EBO.h"
 
+//Element Buffer Objects ===================================
+
 EBO::EBO()= default;
 
 void EBO::setBufferData(const GLuint* indices, GLsizeiptr size)

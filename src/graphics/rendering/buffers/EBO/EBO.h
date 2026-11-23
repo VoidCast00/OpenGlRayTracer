@@ -3,13 +3,14 @@
 
 #include<glad/glad.h>
 
+//Element Buffer Objects=====================
+
 class EBO
 {
 public:
 	GLuint ID{}; // automatically initialized to zero
 
 	EBO();
-
 	void setBufferData(const GLuint* indices, GLsizeiptr size);
 	void init();
 	void Bind() const;

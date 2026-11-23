@@ -1,15 +1,16 @@
 #ifndef OPENGLRAYTRACER_RBO_H
 #define OPENGLRAYTRACER_RBO_H
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <stdexcept>
-#include <iostream>
+#include<glad/glad.h>
+
+
+//Render Buffer Object ======================
+
 
 
 class RBO
 {
 public:
-    unsigned int ID{};
+    GLuint ID{};
     RBO();
     void init();
 

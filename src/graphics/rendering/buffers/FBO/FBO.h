@@ -1,16 +1,15 @@
 #ifndef OPENGLRAYTRACER_FBO_H
 #define OPENGLRAYTRACER_FBO_H
+#include<glad/glad.h>
 
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <stdexcept>
-#include <iostream>
+
+//Frame Buffer Object =============================
 
 
 class FBO
 {
 public:
-    unsigned int ID{};
+    GLuint ID{};
     unsigned int textureColorBufferID{};
     FBO();
     void init();
@@ -18,7 +17,6 @@ public:
     void Delete() const;
     void Bind() const;
     void Unbind() const;
-    void chekBufferForErr() const;
 };
 
 

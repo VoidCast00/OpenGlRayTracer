@@ -1,11 +1,14 @@
 #ifndef VAO_CLASS_H
 #define VAO_CLASS_H
-
 #include<glad/glad.h>
+
+
+//Vertex Array Object ===============================
+
+
 #include "VBO/VBO.h"
 
 
-//VERTEX  ARRAY OBJECT
 class VAO
 {
 public:
