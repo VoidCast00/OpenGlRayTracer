@@ -1,12 +1,12 @@
-#include "shader.h"
+#include "graphics/rendering/shader/shader.h"
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "Window.h"
-#include "generated_shaders.h"
-#include "Renderer.h"
-#include "ImageTexture.h"
-#include "ImageLoader.h"
+#include "graphics/window/Window.h"
+#include "graphics/rendering/shader/generated_shaders.h"
+#include "graphics/rendering/renderer/Renderer.h"
+#include "graphics/ImageLoader/ImageTexture.h"
+#include "graphics/ImageLoader/ImageLoader.h"
 
 
 void GLAPIENTRY debugCallback(GLenum source, GLenum type, GLuint id, GLenum severity,
@@ -82,7 +82,7 @@ int main(){
 
         screenShader.use();
         renderer.screenVAO.Bind();
-        glBindTexture(GL_TEXTURE_2D, renderer.fbo.textureColorBufferID);
+        glBindTexture(GL_TEXTURE_2D, renderer.fbo.getTextureID());
         glDrawArrays(GL_TRIANGLES, 0,6);
 
 

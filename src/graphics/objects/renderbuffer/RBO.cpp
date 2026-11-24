@@ -1,4 +1,4 @@
-#include "RBO/RBO.h"
+#include "graphics/objects/renderbuffer/RBO.h"
 
 
 //Render Buffer Object ======================

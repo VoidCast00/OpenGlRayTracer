@@ -1,5 +1,5 @@
 
-#include "EBO.h"
+#include "graphics/objects/buffer/EBO.h"
 
 //Element Buffer Objects ===================================
 

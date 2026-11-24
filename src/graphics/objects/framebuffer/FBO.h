@@ -2,7 +2,7 @@
 #define OPENGLRAYTRACER_FBO_H
 
 #include<glad/glad.h>
-#include "non_copyable.h"
+#include "util/non_copyable.h"
 
 //@todo update to Direct State Access
 
@@ -13,12 +13,14 @@ class FBO : non_copyable
 {
 private:
     GLuint ID{};
+    GLuint textureColorBufferID{};
+
 public:
-    unsigned int textureColorBufferID{};
     FBO();
     ~FBO();
 
     [[nodiscard]] GLuint getID() const;
+    [[nodiscard]] GLuint getTextureID() const;
     void init();
     void generateTexture(int width, int height) ;
     void Bind() const;

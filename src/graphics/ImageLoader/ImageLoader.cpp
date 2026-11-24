@@ -1,4 +1,4 @@
-#include "ImageLoader.h"
+#include "graphics/ImageLoader/ImageLoader.h"
 
 
 #define STB_IMAGE_IMPLEMENTATION

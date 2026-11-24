@@ -1,10 +1,10 @@
 #ifndef OPENGLRAYTRACER_WINDOW_H
 #define OPENGLRAYTRACER_WINDOW_H
 
-#include  "shader.h"
+#include  "graphics/rendering/shader/shader.h"
 #include "glad/glad.h"
 #include <GLFW/glfw3.h>
-#include "Renderer.h"
+#include "graphics/rendering/renderer/Renderer.h"
 #include <stdexcept>
 #include <iostream>
 

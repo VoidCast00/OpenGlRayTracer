@@ -46,14 +46,9 @@ add_executable(${PROJECT_NAME}
 add_dependencies(${PROJECT_NAME} generate_shaders)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/graphics/window/
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/graphics/rendering/buffers/
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/graphics/rendering/shader/
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/graphics/rendering/renderer/
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/graphics/ImageLoader/
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/
         ${CMAKE_CURRENT_SOURCE_DIR}/include/glad/include/
         ${CMAKE_CURRENT_SOURCE_DIR}/include/stb_image/
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/util/
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE

@@ -2,7 +2,7 @@
 #define OPENGLRAYTRACER_RBO_H
 
 #include<glad/glad.h>
-#include "non_copyable.h"
+#include "util/non_copyable.h"
 
 //@todo update to Direct State Access
 //Render Buffer Object ======================

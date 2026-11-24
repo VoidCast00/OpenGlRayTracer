@@ -4,9 +4,9 @@
 #include <span>
 #include <cstddef>
 #include<glad/glad.h>
-#include "non_copyable.h"
+#include "util/non_copyable.h"
 
-#include "vertex.h"
+#include "util/vertex.h"
 
 class VBO:non_copyable
 {

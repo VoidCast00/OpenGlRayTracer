@@ -1,4 +1,4 @@
-#include "VAO/VAO.h"
+#include "graphics/objects/vertexArray/VAO.h"
 
 //Vertex Array Object ===============================
 

@@ -2,14 +2,14 @@
 #define VAO_CLASS_H
 
 #include<glad/glad.h>
-#include "non_copyable.h"
+#include "util/non_copyable.h"
 
 
 //Vertex Array Object ===============================
 
 
-#include "VBO/VBO.h"
-#include "EBO/EBO.h"
+#include "graphics/objects/buffer/VBO.h"
+#include "graphics/objects/buffer/EBO.h"
 
 class VAO:non_copyable
 {

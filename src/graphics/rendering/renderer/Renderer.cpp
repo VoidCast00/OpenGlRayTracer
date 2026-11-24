@@ -1,4 +1,4 @@
-#include "Renderer.h"
+#include "graphics/rendering/renderer/Renderer.h"
 #include <cstddef>
 
 
@@ -60,7 +60,6 @@ void Renderer::init()
     vao.addAttrib(2,0,2, GL_FLOAT, offsetof(Vertex, u));
 
 
-    fbo.Bind();
     fbo.generateTexture(800,600);
 }
 

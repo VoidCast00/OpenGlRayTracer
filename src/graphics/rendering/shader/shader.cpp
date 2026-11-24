@@ -1,8 +1,8 @@
-#include "shader.h"
+#include "graphics/rendering/shader/shader.h"
 
 #include <iostream>
 #include <stdexcept>
-#include "non_copyable.h"
+#include "util/non_copyable.h"
 
 Shader::Shader(const char* vertexSource, const char* fragmentSource)
     :

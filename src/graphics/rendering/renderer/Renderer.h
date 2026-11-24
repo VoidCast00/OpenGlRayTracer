@@ -1,15 +1,15 @@
 #ifndef OPENGLRAYTRACER_RENDERER_H
 #define OPENGLRAYTRACER_RENDERER_H
 
-#include "VAO/VAO.h"
-#include "VBO/VBO.h"
-#include "EBO/EBO.h"
+#include "graphics/objects/vertexArray/VAO.h"
+#include "graphics/objects/buffer/VBO.h"
+#include "graphics/objects/buffer/EBO.h"
 #include <vector>
 #include <GLFW/glfw3.h>
-#include "vertex.h"
-#include "FBO/FBO.h"
+#include "util/vertex.h"
+#include "graphics/objects/framebuffer/FBO.h"
 #include "stb_image.h"
-#include "non_copyable.h"
+#include "util/non_copyable.h"
 class Renderer : non_copyable
 {
 

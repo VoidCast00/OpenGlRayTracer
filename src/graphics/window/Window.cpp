@@ -1,4 +1,4 @@
-#include "Window.h"
+#include "graphics/window/Window.h"
 #include <iostream>
 
 Window::Window(const int h, const int w) : HEIGHT(h), WIDTH(w)  //constructors

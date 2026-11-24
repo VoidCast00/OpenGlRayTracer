@@ -4,7 +4,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <string>
-#include "ImageTexture.h"
+#include "graphics/ImageLoader/ImageTexture.h"
 #include <filesystem>
 #include <iostream>
 #include <stdexcept>

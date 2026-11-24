@@ -1,14 +1,15 @@
-#include "FBO.h"
+#include "graphics/objects/framebuffer/FBO.h"
 
 //Frame Buffer Object =============================
 
 FBO::FBO()=default;
 
 void FBO::init(){
-    glGenFramebuffers(1, &ID);
+    glCreateFramebuffers(1, &ID);
 }
 
 void FBO::generateTexture(int width, int height){
+    Bind();
     glGenTextures(1, &textureColorBufferID);
     glBindTexture(GL_TEXTURE_2D, textureColorBufferID);
     //@todo figure out how to get the current size bc this texture is suposed to cover the whole screen
@@ -21,7 +22,6 @@ void FBO::generateTexture(int width, int height){
     //@todo implement RBO for depth and stencil for 3D
     // remember those cant be sampled
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, textureColorBufferID, 0);
-    Unbind();
 }
 
 void FBO::Bind() const
@@ -37,6 +37,10 @@ void FBO::Unbind() const
 
 GLuint FBO::getID() const {
     return ID;
+}
+
+GLuint FBO::getTextureID() const {
+    return textureColorBufferID;
 }
 
 FBO::~FBO()

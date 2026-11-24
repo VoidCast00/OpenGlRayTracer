@@ -1,4 +1,4 @@
-#include "VBO.h"
+#include "graphics/objects/buffer/VBO.h"
 
 VBO::VBO() = default;
 
