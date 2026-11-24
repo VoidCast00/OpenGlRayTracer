@@ -35,9 +35,11 @@ void FBO::Unbind() const
 }
 
 
+GLuint FBO::getID() const {
+    return ID;
+}
 
-
-void FBO::Delete() const
+FBO::~FBO()
 {
     glDeleteFramebuffers(1, &ID);
 }

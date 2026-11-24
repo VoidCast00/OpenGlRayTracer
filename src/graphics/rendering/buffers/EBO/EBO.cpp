@@ -13,9 +13,12 @@ void EBO::init(){
 	glCreateBuffers(1, &ID);
 }
 
+GLuint EBO::getID() const {
+	return ID;
+}
 
-// Deletes the EBO
-void EBO::Delete() const
+
+EBO::~EBO()
 {
 	glDeleteBuffers(1, &ID);
 }

@@ -10,6 +10,9 @@ void RBO::init(){
     glGenBuffers(1, &ID);
 }
 
+RBO::~RBO() {
+    glDeleteBuffers(1, &ID);
+}
 
 void RBO::Bind() const
 {

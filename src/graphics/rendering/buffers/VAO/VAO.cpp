@@ -9,11 +9,11 @@ void VAO::init(){
 }
 
 void VAO::attachVertexBuffer(GLuint slot, const VBO& vbo, GLsizei stride) const {
-	glVertexArrayVertexBuffer(ID, slot, vbo.ID, 0, stride);
+	glVertexArrayVertexBuffer(ID, slot, vbo.getID(), 0, stride);
 }
 
 void VAO::attachElementBuffer(const EBO& ebo) const {
-	glVertexArrayElementBuffer(ID, ebo.ID);
+	glVertexArrayElementBuffer(ID, ebo.getID());
 }
 
 
@@ -27,9 +27,11 @@ void VAO::Bind() const
 	glBindVertexArray(ID);
 }
 
+GLuint VAO::getID() const {
+	return ID;
+}
 
-
-void VAO::Delete() const
+VAO::~VAO()
 {
 	glDeleteVertexArrays(1, &ID);
 }

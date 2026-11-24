@@ -2,9 +2,12 @@
 
 #include <iostream>
 #include <stdexcept>
+#include "non_copyable.h"
 
 Shader::Shader(const char* vertexSource, const char* fragmentSource)
-    : m_vertexSource(vertexSource), m_fragmentSource(fragmentSource) {
+    :
+    m_vertexSource(vertexSource),
+    m_fragmentSource(fragmentSource) {
 }
 
 Shader::~Shader() {
@@ -68,6 +71,7 @@ void Shader::CheckCompileErrors(unsigned int shader, const std::string& type) {
         if (!success) {
             glGetProgramInfoLog(shader, 1024, nullptr, infoLog);
             std::cerr << "Program link error:\n" << infoLog << "\n";
+
             throw std::runtime_error("Shader linking failed");
         }
     }

@@ -3,8 +3,10 @@
 
 #include <string>
 #include <glad/glad.h>
+#include "non_copyable.h"
 
-class Shader {
+
+class Shader : non_copyable{
 public:
     GLuint ID{};
     Shader(const char* vertexSource, const char* fragmentSource);

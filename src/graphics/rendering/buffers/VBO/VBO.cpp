@@ -12,9 +12,11 @@ void VBO::init(){
 
 }
 
+GLuint VBO::getID() const {
+	return ID;
+}
 
-
-void VBO::Delete() const
+VBO::~VBO()
 {
 	glDeleteBuffers(1, &ID);
 }

@@ -6,10 +6,7 @@ Renderer::Renderer() = default;
 
 Renderer::~Renderer()
 {
-    vbo.Delete();
-    ebo.Delete();
-    vao.Delete();
-    fbo.Delete();
+
 
     vertices.clear();
     indices.clear();

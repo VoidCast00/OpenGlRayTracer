@@ -9,8 +9,9 @@
 #include "vertex.h"
 #include "FBO/FBO.h"
 #include "stb_image.h"
-
-class Renderer{
+#include "non_copyable.h"
+class Renderer : non_copyable
+{
 
 public:
     Renderer();
